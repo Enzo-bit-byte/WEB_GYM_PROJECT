@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard-page">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>MFG</h2>
+                <div class="user-greeting">Welcome, [User]</div>
+            </div>
+
+            <div class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+
+                <div class="nav-section-header">FITNESS</div>
+                <a href="./dashboard/workouts.html" class="nav-item">
+                    <i class="fas fa-dumbbell"></i> Workouts
+                </a>
+                <a href="./dashboard/trainingplans.html" class="nav-item">
+                    <i class="fas fa-clipboard-list"></i> Training Plans
+                </a>
+
+                <div class="nav-section-header">ACCOUNT</div>
+                <a href="./dashboard/profile.html" class="nav-item">
+                    <i class="fas fa-user"></i> Profile
+                </a>
+                <a href="./dashboard/settings.html" class="nav-item">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+
+                <div class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="hero-section">
+                <h1 class="hero-title">Make Your Body Shape</h1>
+                <p class="hero-text">Unleash your potential and embark on a journey towards a stronger, fitter, and more confident you. Track your progress and witness the incredible transformation your body is capable of!</p>
+                <button class="cta-button">GET STARTED</button>
+            </div>
+
+            <h2 style="color: white;">Your Dashboard</h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3 class="card-title">Access to our gym</h3>
+                    <p style="color: black;">Check your membership status and access hours</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Upcoming Events</h3>
+                    <p style="color: black;">View and register for fitness classes and workshops</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">User Profile</h3>
+                    <p style="color: black;">Update your personal information and fitness goals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

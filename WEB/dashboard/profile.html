@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="profile-page">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>MFG</h2>
+                <div class="user-greeting">Welcome, [User]</div>
+            </div>
+
+                <div class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+
+                <div class="nav-section-header">FITNESS</div>
+                <a href="./workouts.html" class="nav-item">
+                    <i class="fas fa-dumbbell"></i> Workouts
+                </a>
+                <a href="./trainingplans.html" class="nav-item">
+                    <i class="fas fa-clipboard-list"></i> Training Plans
+                </a>
+
+                <div class="nav-section-header">ACCOUNT</div>
+                <a href="./profile.html" class="nav-item active">
+                    <i class="fas fa-user"></i> Profile
+                </a>
+                <a href="./settings.html" class="nav-item">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+
+                <div class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to logout?')) {
+                    window.location.href = '../index.html';
+                }
+            });
+        </script>
+</body>
+</html>
